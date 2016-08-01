@@ -1,0 +1,69 @@
+
+
+package com.example.mt_2016.task2;
+
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+
+    Button buttonSubmit;
+    EditText editTextUserName;
+    EditText editTextAddress;
+    EditText editTextPwd;
+    TextView textViewDefault;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        buttonSubmit = (Button) findViewById(R.id.buttonSubmit);
+        editTextUserName = (EditText) findViewById(R.id.editTextUserName);
+        editTextAddress = (EditText) findViewById(R.id.editTextAddress);
+        editTextPwd = (EditText) findViewById(R.id.editTextPassword);
+        textViewDefault = (TextView) findViewById(R.id.textViewDefault);
+
+    }
+
+    public void onSubmitClick(View v) {
+        String text = buttonSubmit.getText().toString();
+        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG );
+        toast.show();
+        textViewDefault.setText(text);
+    }
+
+    public void onUserNameClick(View v) {
+        String text = editTextUserName.getText().toString();
+        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG );
+        toast.show();
+        textViewDefault.setText(text);
+    }
+
+    public void onPasswordClick(View v) {
+        String text = editTextPwd.getText().toString();
+        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG );
+        toast.show();
+        textViewDefault.setText(text);
+    }
+
+    public void onAddressClick(View v) {
+        String text = editTextAddress.getText().toString();
+        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG );
+        toast.show();
+        textViewDefault.setText(text);
+    }
+}
+
+
